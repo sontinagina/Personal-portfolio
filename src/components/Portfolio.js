@@ -11,11 +11,13 @@ import {
    ProgressBar,
 } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
+import { Link } from "react-scroll";
+
 import img11 from "../images/my1.png";
 // import img12 from "../images/dev.jfif";
 import img12 from "../images/n19.jpeg";
-import img13 from "../images/n16.jpeg";
-import img14 from "../images/my1.png";
+import img13 from "../images/my1.png";
+import img14 from "../images/my11.jpg";
 import { BsFillTelephoneFill } from "react-icons/bs";
 import { IoMail } from "react-icons/io5";
 // import { Form, FormControl, Button, img11 } from "bootstrap";
@@ -23,6 +25,7 @@ class Portfolio extends React.Component {
    constructor() {
       super();
       this.state = {
+         skills: "programming-languages",
          consoleText:
             (["Hello World.", "Console Text", "Made with Love."],
             "text",
@@ -81,35 +84,96 @@ class Portfolio extends React.Component {
    render() {
       return (
          <div className="wholePage">
-            <div className="Portfolio">
-               <div className="p1">
+            <div id="home" className="Portfolio">
+               <div className="navDiv">
                   <>
                      <Navbar
+                        border="none"
                         bg="light"
                         variant="light"
-                        style={{ color: "white" }}
+                        style={{ color: "rgb(26, 146, 86)" }}
                      >
                         <Container className="container1">
-                           <Navbar.Brand></Navbar.Brand>
+                           <Navbar.Brand style={{ color: "rgb(41, 121, 41)" }}>
+                              NAGINA'S PORTFOLIO
+                           </Navbar.Brand>
                            <Nav className="me-auto">
-                              {/* <h5>NAGINA'S PORTFOLIO</h5> */}
-                              <Nav.Link className="links">HOME</Nav.Link>
-                              <Nav.Link className="links">ABOUT</Nav.Link>
-                              <Nav.Link className="links">RESUME</Nav.Link>
-                              <Nav.Link className="links">PROJECTS</Nav.Link>
-                              <Nav.Link className="links">CONTACT</Nav.Link>
+                              <Link
+                                 activeClass="active"
+                                 className="links"
+                                 to="home"
+                                 spy={true}
+                                 smooth={true}
+                                 duration={-500}
+                                 delay={0}
+                                 spyThrottle={0}
+                              >
+                                 HOME
+                              </Link>
+                              <Link
+                                 duration={-500}
+                                 delay={0}
+                                 className="links"
+                                 to="about"
+                                 spy={true}
+                                 smooth={true}
+                              >
+                                 ABOUT{" "}
+                              </Link>
+                              <Link
+                                 className="links"
+                                 to="resume"
+                                 spy={true}
+                                 smooth={true}
+                                 duration={-500}
+                                 delay={0}
+                              >
+                                 RESUME
+                              </Link>
+                              <Link
+                                 className="links"
+                                 to="projects"
+                                 spy={true}
+                                 smooth={true}
+                                 duration={-500}
+                                 delay={0}
+                              >
+                                 PROJECTS
+                              </Link>
+                              <Link
+                                 className="links"
+                                 to="contact"
+                                 spy={true}
+                                 smooth={true}
+                                 duration={-500}
+                                 delay={0}
+                              >
+                                 CONTACT
+                              </Link>
                            </Nav>
                         </Container>
                      </Navbar>
                   </>
                </div>
                <div className="p2">
+                  <span className="imgSpan1">
+                     {" "}
+                     <Image
+                        src={img14}
+                        style={{
+                           width: 220,
+                           height: 220,
+                           borderRadius: 300 / 2,
+                        }}
+                     ></Image>
+                  </span>
                   <div class="console-container">
                      <span id="text">Hi, I am Aditi|</span>
                      <div class="console-underscore" id="console">
                         &#95;
                      </div>
                   </div>
+
                   {/* <Image className="img1" src={img11}></Image> */}
                   {/* <Image src={img12}></Image> */}
                </div>
@@ -119,9 +183,16 @@ class Portfolio extends React.Component {
             <div className="imgAbout">
                <span className="imgSpan">
                   {" "}
-                  <Image src={img14}></Image>
+                  <Image
+                     src={img13}
+                     // style={{
+                     //    width: 250,
+                     //    height: 260,
+                     //    borderRadius: 400 / 2,
+                     // }}
+                  ></Image>
                </span>
-               <div className="about">
+               <div id="about" className="aboutClass">
                   <h2>About Me</h2>
                   <h5>
                      I am a fresher software engineer who loves programming and
@@ -153,7 +224,7 @@ class Portfolio extends React.Component {
                   </a>
                </div>
             </div>
-            <div className="EDUCATION">
+            <div id="resume" className="EDUCATION">
                <div className="leftSide">
                   <h2 className="e1">EDUCATION</h2>
                </div>
@@ -205,49 +276,278 @@ class Portfolio extends React.Component {
                      </div>
                      <div>
                         <>
-                           <Button id="b1" variant="success">
+                           <Button
+                              id="b1"
+                              variant="success"
+                              onClick={() =>
+                                 this.setState({
+                                    skills: "programming-languages",
+                                 })
+                              }
+                           >
                               Languages
                            </Button>{" "}
-                           <Button id="AllB" variant="success">
+                           <Button
+                              id="AllB"
+                              variant="success"
+                              onClick={() =>
+                                 this.setState({
+                                    skills: "databases",
+                                 })
+                              }
+                           >
                               Databases
                            </Button>
                            {"   "}
-                           <Button id="AllB" variant="success">
+                           <Button
+                              id="AllB"
+                              variant="success"
+                              onClick={() =>
+                                 this.setState({
+                                    skills: "frameworks",
+                                 })
+                              }
+                           >
                               Frameworks
                            </Button>{" "}
-                           <Button id="AllB" variant="success">
+                           <Button
+                              id="AllB"
+                              variant="success"
+                              onClick={() =>
+                                 this.setState({
+                                    skills: "programming-concepts",
+                                 })
+                              }
+                           >
                               Programming-Concepts
                            </Button>{" "}
-                           <Button id="AllB" variant="success">
+                           <Button
+                              id="AllB"
+                              variant="success"
+                              onClick={() =>
+                                 this.setState({
+                                    skills: "other-tools",
+                                 })
+                              }
+                           >
                               Other-Tools
                            </Button>{" "}
                         </>
                      </div>
                      <div className="progress1">
-                        <h4>JAVA</h4>
-                        <ProgressBar striped id="p1" variant="black" now={50} />
-                        <h4>JavaScript</h4>
-                        <ProgressBar striped id="p1" variant="black" now={50} />
-                        <h4>C</h4>
-
-                        <ProgressBar striped id="p1" variant="black" now={50} />
-                        <h4>C++</h4>
-
-                        <ProgressBar striped id="p1" variant="black" now={50} />
-
-                        {/* <ProgressBar striped id="p1" variant="black" now={50} />
-                        <ProgressBar striped id="p1" variant="black" now={50} /> */}
-                        {/* <div className="p1"> */}
-                        {/* <ProgressBar striped variant="black" now={35} key={1} /> */}
-                        {/* <ProgressBar variant="light" now={100} key={2} />{" "} */}
-                        {/* </div> */}
+                        {this.state.skills === "programming-languages" ? (
+                           <div>
+                              <h4>JAVA</h4>
+                              <ProgressBar
+                                 striped
+                                 id="p1"
+                                 variant="black"
+                                 now={50}
+                              />
+                              <h4>C</h4>
+                              <ProgressBar
+                                 striped
+                                 id="p1"
+                                 variant="black"
+                                 now={50}
+                              />
+                              <h4>JavaScript</h4>
+                              <ProgressBar
+                                 striped
+                                 id="p1"
+                                 variant="black"
+                                 now={50}
+                              />
+                              <h4>C++</h4>
+                              <ProgressBar
+                                 striped
+                                 id="p1"
+                                 variant="black"
+                                 now={50}
+                              />
+                              <h4>SQL</h4>
+                              <ProgressBar
+                                 striped
+                                 id="p1"
+                                 variant="black"
+                                 now={50}
+                              />
+                           </div>
+                        ) : null}
+                        {/** Databases */}
+                        {this.state.skills === "databases" ? (
+                           <div>
+                              <h4>MongoDB</h4>
+                              <ProgressBar
+                                 striped
+                                 id="p1"
+                                 variant="black"
+                                 now={50}
+                              />
+                              <h4>MYSQL</h4>
+                              <ProgressBar
+                                 striped
+                                 id="p1"
+                                 variant="black"
+                                 now={50}
+                              />
+                           </div>
+                        ) : null}
+                        {/**FrameWorks */}
+                        {this.state.skills === "frameworks" ? (
+                           <div>
+                              <h4>ReactJS</h4>
+                              <ProgressBar
+                                 striped
+                                 id="p1"
+                                 variant="black"
+                                 now={50}
+                              />
+                              <h4>ExpressJS</h4>
+                              <ProgressBar
+                                 striped
+                                 id="p1"
+                                 variant="black"
+                                 now={50}
+                              />
+                           </div>
+                        ) : null}
+                        {/**programming concepts */}
+                        {this.state.skills === "programming-concepts" ? (
+                           <div>
+                              <h4> Data Structure & Algorithms</h4>
+                              <ProgressBar
+                                 striped
+                                 id="p1"
+                                 variant="black"
+                                 now={50}
+                              />
+                              <h4>Full Stack Development</h4>
+                              <ProgressBar
+                                 striped
+                                 id="p1"
+                                 variant="black"
+                                 now={50}
+                              />
+                              <h4>Problem Solving</h4>
+                              <ProgressBar
+                                 striped
+                                 id="p1"
+                                 variant="black"
+                                 now={50}
+                              />
+                           </div>
+                        ) : null}
+                        {/**other tools */}
+                        {this.state.skills === "other-tools" ? (
+                           <div>
+                              <h4>NodeJS</h4>
+                              <ProgressBar
+                                 striped
+                                 id="p1"
+                                 variant="black"
+                                 now={50}
+                              />
+                              <h4>Html</h4>
+                              <ProgressBar
+                                 striped
+                                 id="p1"
+                                 variant="black"
+                                 now={50}
+                              />
+                              <h4>CSS</h4>
+                              <ProgressBar
+                                 striped
+                                 id="p1"
+                                 variant="black"
+                                 now={50}
+                              />
+                           </div>
+                        ) : null}
                      </div>
                   </span>
                </span>
             </div>
-            <div className="ProjectsList">
-               <div className="proj1">
-                  <h3> CHECKOUT SOME OF MY PROJECTS</h3>
+            <div id="projects" className="ProjectsList">
+               <div className="projectHead">
+                  <Button striped variant="success">
+                     {" "}
+                     <h3> CHECKOUT SOME OF MY PROJECTS</h3>
+                  </Button>
+               </div>
+               <div className="project1"></div>
+               <div className="project2"></div>
+               <div className="project3"></div>
+            </div>
+            <div id="contact" className="whole-footer-page">
+               <div className="foo-text">
+                  Want to get in touch? Leave a message
+               </div>
+               <div className="internal-footer-pages">
+                  <div className="footer-form">
+                     <Form>
+                        <Form.Group
+                           className="mb-3"
+                           controlId="exampleForm.ControlInput1"
+                        >
+                           <Form.Label style={{ color: "white" }}>
+                              Name
+                           </Form.Label>
+                           <Form.Control
+                              id="input-bars"
+                              size="lg"
+                              type="text"
+                              placeholder="name"
+                           />
+                        </Form.Group>
+                        <Form.Group
+                           className="mb-3"
+                           controlId="exampleForm.ControlInput1"
+                        >
+                           <Form.Label style={{ color: "white" }}>
+                              Email address
+                           </Form.Label>
+                           <Form.Control
+                              size="lg"
+                              id="input-bars"
+                              type="email"
+                              placeholder="name@example.com"
+                           />
+                        </Form.Group>
+                        <Form.Group
+                           className="mb-3"
+                           controlId="exampleForm.ControlInput1"
+                        >
+                           <Form.Label style={{ color: "white" }}>
+                              Subject
+                           </Form.Label>
+                           <Form.Control
+                              size="lg"
+                              id="input-bars"
+                              type="text"
+                              placeholder="subject"
+                              rows={3}
+                           />
+                        </Form.Group>
+                        <Form.Group
+                           className="mb-3"
+                           controlId="exampleForm.ControlTextarea1"
+                        >
+                           <Form.Label style={{ color: "white" }}>
+                              Example textarea
+                           </Form.Label>
+                           <Form.Control
+                              id="form-text-area"
+                              as="textarea"
+                              rows={3}
+                           />
+                        </Form.Group>{" "}
+                        <Button variant="success" size="lg">
+                           Submit Message
+                        </Button>
+                     </Form>
+                  </div>
+                  <div className="contact"></div>
                </div>
             </div>
          </div>
