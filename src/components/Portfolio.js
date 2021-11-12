@@ -4,18 +4,16 @@ import {
    Navbar,
    Container,
    Nav,
-   NavDropdown,
    Form,
-   FormControl,
    Button,
    ProgressBar,
 } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Link } from "react-scroll";
 
-import img11 from "../images/my1.png";
+// import img11 from "../images/my1.png";
 // import img12 from "../images/dev.jfif";
-import img12 from "../images/n19.jpeg";
+// import img12 from "../images/n19.jpeg";
 import img13 from "../images/my1.png";
 import img14 from "../images/my11.jpg";
 import proimg1 from "../images/portfolioSS.PNG";
@@ -168,9 +166,9 @@ class Portfolio extends React.Component {
                         }}
                      ></Image>
                   </span>
-                  <div class="console-container">
+                  <div className="console-container">
                      <span id="text">Hi, I am Nagina </span>
-                     <div class="console-underscore" id="console">
+                     <div className="console-underscore" id="console">
                         &#95;
                      </div>
                   </div>
@@ -355,35 +353,35 @@ class Portfolio extends React.Component {
                            <div>
                               <h4>JAVA</h4>
                               <ProgressBar
-                                 striped
+                                 striped={true}
                                  id="p1"
                                  variant="black"
                                  now={50}
                               />
                               <h4>C</h4>
                               <ProgressBar
-                                 striped
+                                 striped={true}
                                  id="p1"
                                  variant="black"
                                  now={50}
                               />
                               <h4>JavaScript</h4>
                               <ProgressBar
-                                 striped
+                                 striped={true}
                                  id="p1"
                                  variant="black"
                                  now={50}
                               />
                               <h4>C++</h4>
                               <ProgressBar
-                                 striped
+                                 striped={true}
                                  id="p1"
                                  variant="black"
                                  now={50}
                               />
                               <h4>SQL</h4>
                               <ProgressBar
-                                 striped
+                                 striped={true}
                                  id="p1"
                                  variant="black"
                                  now={50}
@@ -395,14 +393,14 @@ class Portfolio extends React.Component {
                            <div>
                               <h4>MongoDB</h4>
                               <ProgressBar
-                                 striped
+                                 striped={true}
                                  id="p1"
                                  variant="black"
                                  now={50}
                               />
                               <h4>MYSQL</h4>
                               <ProgressBar
-                                 striped
+                                 striped={true}
                                  id="p1"
                                  variant="black"
                                  now={50}
@@ -414,14 +412,14 @@ class Portfolio extends React.Component {
                            <div>
                               <h4>ReactJS</h4>
                               <ProgressBar
-                                 striped
+                                 striped={true}
                                  id="p1"
                                  variant="black"
                                  now={50}
                               />
                               <h4>ExpressJS</h4>
                               <ProgressBar
-                                 striped
+                                 striped={true}
                                  id="p1"
                                  variant="black"
                                  now={50}
@@ -433,21 +431,21 @@ class Portfolio extends React.Component {
                            <div>
                               <h4> Data Structure & Algorithms</h4>
                               <ProgressBar
-                                 striped
+                                 striped={true}
                                  id="p1"
                                  variant="black"
                                  now={50}
                               />
                               <h4>Full Stack Development</h4>
                               <ProgressBar
-                                 striped
+                                 striped={true}
                                  id="p1"
                                  variant="black"
                                  now={50}
                               />
                               <h4>Problem Solving</h4>
                               <ProgressBar
-                                 striped
+                                 striped={true}
                                  id="p1"
                                  variant="black"
                                  now={50}
@@ -459,21 +457,21 @@ class Portfolio extends React.Component {
                            <div>
                               <h4>NodeJS</h4>
                               <ProgressBar
-                                 striped
+                                 striped={true}
                                  id="p1"
                                  variant="black"
                                  now={50}
                               />
                               <h4>Html</h4>
                               <ProgressBar
-                                 striped
+                                 striped={true}
                                  id="p1"
                                  variant="black"
                                  now={50}
                               />
                               <h4>CSS</h4>
                               <ProgressBar
-                                 striped
+                                 striped={true}
                                  id="p1"
                                  variant="black"
                                  now={50}
@@ -486,7 +484,7 @@ class Portfolio extends React.Component {
             </div>
             <div id="projects" className="ProjectsList">
                <div className="projectHead">
-                  <Button striped variant="success">
+                  <Button variant="success">
                      {" "}
                      <h3> CHECKOUT SOME OF MY PROJECTS</h3>
                   </Button>

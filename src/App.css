@@ -321,12 +321,12 @@ margin-bottom: 20px;
       flex-direction: row;
       
     }
-    .ProjectsList{
+    /* .ProjectsList{
       
       /* color: white; */
       /* border: 2px solid red; */
 
-    }
+    /* } */ 
     .projectHead{
       color: rgb(255, 255, 255);
 text-align: center;
