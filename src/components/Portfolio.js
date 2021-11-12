@@ -18,6 +18,7 @@ import img11 from "../images/my1.png";
 import img12 from "../images/n19.jpeg";
 import img13 from "../images/my1.png";
 import img14 from "../images/my11.jpg";
+import proimg1 from "../images/portfolioSS.PNG";
 import { BsFillTelephoneFill } from "react-icons/bs";
 import { IoMail } from "react-icons/io5";
 // import { Form, FormControl, Button, img11 } from "bootstrap";
@@ -85,75 +86,75 @@ class Portfolio extends React.Component {
       return (
          <div className="wholePage">
             <div id="home" className="Portfolio">
+               {/* <div className="box"> */}
                <div className="navDiv">
-                  <>
-                     <Navbar
-                        border="none"
-                        bg="light"
-                        variant="light"
-                        style={{ color: "rgb(26, 146, 86)" }}
-                     >
-                        <Container className="container1">
-                           <Navbar.Brand style={{ color: "rgb(41, 121, 41)" }}>
-                              NAGINA'S PORTFOLIO
-                           </Navbar.Brand>
-                           <Nav className="me-auto">
-                              <Link
-                                 activeClass="active"
-                                 className="links"
-                                 to="home"
-                                 spy={true}
-                                 smooth={true}
-                                 duration={-500}
-                                 delay={0}
-                                 spyThrottle={0}
-                              >
-                                 HOME
-                              </Link>
-                              <Link
-                                 duration={-500}
-                                 delay={0}
-                                 className="links"
-                                 to="about"
-                                 spy={true}
-                                 smooth={true}
-                              >
-                                 ABOUT{" "}
-                              </Link>
-                              <Link
-                                 className="links"
-                                 to="resume"
-                                 spy={true}
-                                 smooth={true}
-                                 duration={-500}
-                                 delay={0}
-                              >
-                                 RESUME
-                              </Link>
-                              <Link
-                                 className="links"
-                                 to="projects"
-                                 spy={true}
-                                 smooth={true}
-                                 duration={-500}
-                                 delay={0}
-                              >
-                                 PROJECTS
-                              </Link>
-                              <Link
-                                 className="links"
-                                 to="contact"
-                                 spy={true}
-                                 smooth={true}
-                                 duration={-500}
-                                 delay={0}
-                              >
-                                 CONTACT
-                              </Link>
-                           </Nav>
-                        </Container>
-                     </Navbar>
-                  </>
+                  <Navbar
+                     className="navbar navbar-default navbar-fixed-top"
+                     border="none"
+                     bg="light"
+                     variant="light"
+                     style={{ color: "rgb(26, 146, 86)" }}
+                  >
+                     <Container className="container1">
+                        <Navbar.Brand style={{ color: "rgb(41, 121, 41)" }}>
+                           NAGINA'S PORTFOLIO
+                        </Navbar.Brand>
+                        <Nav className="me-auto">
+                           <Link
+                              activeClass="active"
+                              className="links"
+                              to="home"
+                              spy={true}
+                              smooth={true}
+                              duration={-500}
+                              delay={0}
+                              spyThrottle={0}
+                           >
+                              HOME
+                           </Link>
+                           <Link
+                              duration={-500}
+                              delay={0}
+                              className="links"
+                              to="about"
+                              spy={true}
+                              smooth={true}
+                           >
+                              ABOUT{" "}
+                           </Link>
+                           <Link
+                              className="links"
+                              to="resume"
+                              spy={true}
+                              smooth={true}
+                              duration={-500}
+                              delay={0}
+                           >
+                              RESUME
+                           </Link>
+                           <Link
+                              className="links"
+                              to="projects"
+                              spy={true}
+                              smooth={true}
+                              duration={-500}
+                              delay={0}
+                           >
+                              PROJECTS
+                           </Link>
+                           <Link
+                              className="links"
+                              to="contact"
+                              spy={true}
+                              smooth={true}
+                              duration={-500}
+                              delay={0}
+                           >
+                              CONTACT
+                           </Link>
+                        </Nav>
+                     </Container>
+                  </Navbar>
                </div>
                <div className="p2">
                   <span className="imgSpan1">
@@ -161,24 +162,31 @@ class Portfolio extends React.Component {
                      <Image
                         src={img14}
                         style={{
-                           width: 220,
-                           height: 220,
+                           width: 210,
+                           height: 210,
                            borderRadius: 300 / 2,
                         }}
                      ></Image>
                   </span>
                   <div class="console-container">
-                     <span id="text">Hi, I am Aditi|</span>
+                     <span id="text">Hi, I am Nagina </span>
                      <div class="console-underscore" id="console">
                         &#95;
                      </div>
                   </div>
-
+                  <div id="dev-content">
+                     I'm a Full Stack Developer with a passion for solving real
+                     world problems with mathematics.
+                     <br /> And I believe I can solve some if not all of your
+                     problems.
+                     <br /> Let's start scrolling and learn more about me
+                  </div>
                   {/* <Image className="img1" src={img11}></Image> */}
                   {/* <Image src={img12}></Image> */}
                </div>
                {/* <Image src={img13}></Image> */}
                {/* <Image src={img14}></Image> */}
+               {/* </div> */}
             </div>
             <div className="imgAbout">
                <span className="imgSpan">
@@ -193,34 +201,42 @@ class Portfolio extends React.Component {
                   ></Image>
                </span>
                <div id="about" className="aboutClass">
-                  <h2>About Me</h2>
-                  <h5>
-                     I am a fresher software engineer who loves programming and
-                     mathematics in general. While I have a comprehensive
-                     mechanical engineering background, my propensity has always
-                     been towards software development, competitive programming
-                     and problem solving. I am a thorough learner with an
-                     intention of exploring different work positions. My
-                     motivation which drives me the most is self-improvement.
-                     You can check out some of my personal projects that I have
-                     recently worked on. here .
-                  </h5>
-                  <h2>Contact Details</h2>
+                  <h2>About Me</h2>I am a fresher Full stack Developer who loves
+                  programming and creating projects on ReactJS. While I have a
+                  comprehensive Computer Science background in B.C.A, my
+                  propensity has always been towards software development,
+                  programming and problem solving. I am a thorough learner with
+                  an intention of exploring different work positions. My
+                  motivation which drives me the most is self-improvement. You
+                  can check out some of my personal projects that I have
+                  recently worked on.
+                  <Link
+                     // className="links"
+                     to="projects"
+                     spy={true}
+                     smooth={true}
+                     duration={-500}
+                     delay={0}
+                     style={{ color: "white" }}
+                  >
+                     here
+                  </Link>
+                  .<h2>Contact Details</h2>
                   Nagina Sonti <br />
                   B-109/51 Mira Nagar
-                  <br /> Near Kela devi Mandir,Dewas M.P.
+                  <br /> robot square, A-11/02,Dewas M.P.
                   <br />
                   <p id="mobileNo">
                      <BsFillTelephoneFill />
                      +916261337929
                   </p>
+                  <IoMail />{" "}
                   <a
                      id="gmail"
                      _ngcontent-qcq-c3=""
                      href="mailto:sontinagina11@gmail.com"
                   >
-                     <IoMail />
-                     sontinagina11@gmail.com{" "}
+                     sontinagina11@gmail.com
                   </a>
                </div>
             </div>
@@ -475,9 +491,20 @@ class Portfolio extends React.Component {
                      <h3> CHECKOUT SOME OF MY PROJECTS</h3>
                   </Button>
                </div>
-               <div className="project1"></div>
-               <div className="project2"></div>
-               <div className="project3"></div>
+               <div className="projectsDiv">
+                  <div className="project1">
+                     {" "}
+                     <Image src={proimg1}></Image>{" "}
+                  </div>
+                  <div className="project2">
+                     <h3>Personal-Portfolio</h3>
+                     <p>
+                        This is simple reactjs project which is described
+                        personal skills and achivements.I have used React-Js and
+                        React-bootstrap to develope this website.
+                     </p>
+                  </div>
+               </div>
             </div>
             <div id="contact" className="whole-footer-page">
                <div className="foo-text">
@@ -547,7 +574,25 @@ class Portfolio extends React.Component {
                         </Button>
                      </Form>
                   </div>
-                  <div className="contact"></div>
+                  <div className="contactDetail">
+                     <h2>Contact Details</h2>
+                     Nagina Sonti <br />
+                     B-109/51 Mira Nagar
+                     <br /> Near Kela devi Mandir,Dewas M.P.
+                     <br />
+                     <p id="mobileNo">
+                        <BsFillTelephoneFill />
+                        +916261337929
+                     </p>
+                     <IoMail />{" "}
+                     <a
+                        id="gmail"
+                        _ngcontent-qcq-c3=""
+                        href="mailto:sontinagina11@gmail.com"
+                     >
+                        sontinagina11@gmail.com
+                     </a>
+                  </div>
                </div>
             </div>
          </div>
