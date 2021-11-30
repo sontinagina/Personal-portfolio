@@ -16,7 +16,9 @@ import { Link } from "react-scroll";
 // import img12 from "../images/n19.jpeg";
 import img13 from "../images/my1.png";
 import img14 from "../images/my11.jpg";
-import proimg1 from "../images/portfolioSS.PNG";
+import img15 from "../images/MentorHomePage.PNG";
+import img16 from "../images/tinyurl.PNG";
+import img17 from "../images/lyricsapp.PNG";
 import { BsFillTelephoneFill } from "react-icons/bs";
 import { IoMail } from "react-icons/io5";
 // import { Form, FormControl, Button, img11 } from "bootstrap";
@@ -25,166 +27,119 @@ class Portfolio extends React.Component {
       super();
       this.state = {
          skills: "programming-languages",
-         consoleText:
-            (["Hello World.", "Console Text", "Made with Love."],
-            "text",
-            ["tomato", "rebeccapurple", "lightblue"]),
       };
    }
 
-   // function([string1, string2],target id,[color1,color2])
-
-   consoleText(words, id, colors) {
-      if (colors === undefined) colors = ["#fff"];
-      var visible = true;
-      var con = document.getElementById("console");
-      var letterCount = 1;
-      var x = 1;
-      var waiting = false;
-      var target = document.getElementById(id);
-      target.setAttribute("style", "color:" + colors[0]);
-      window.setInterval(function () {
-         if (letterCount === 0 && waiting === false) {
-            waiting = true;
-            target.innerHTML = words[0].substring(0, letterCount);
-            window.setTimeout(function () {
-               var usedColor = colors.shift();
-               colors.push(usedColor);
-               var usedWord = words.shift();
-               words.push(usedWord);
-               x = 1;
-               target.setAttribute("style", "color:" + colors[0]);
-               letterCount += x;
-               waiting = false;
-            }, 1000);
-         } else if (letterCount === words[0].length + 1 && waiting === false) {
-            waiting = true;
-            window.setTimeout(function () {
-               x = -1;
-               letterCount += x;
-               waiting = false;
-            }, 1000);
-         } else if (waiting === false) {
-            target.innerHTML = words[0].substring(0, letterCount);
-            letterCount += x;
-         }
-      }, 120);
-      window.setInterval(function () {
-         if (visible === true) {
-            con.className = "console-underscore hidden";
-            visible = false;
-         } else {
-            con.className = "console-underscore";
-
-            visible = true;
-         }
-      }, 400);
-   }
    render() {
       return (
          <div className="wholePage">
             <div id="home" className="Portfolio">
-               {/* <div className="box"> */}
                <div className="navDiv">
                   <Navbar
                      className="navbar navbar-default navbar-fixed-top"
                      border="none"
-                     bg="light"
+                     bg="warning"
                      variant="light"
-                     style={{ color: "rgb(26, 146, 86)" }}
+                     style={{ color: "rgb(255, 123, 1)" }}
                   >
                      <Container className="container1">
-                        <Navbar.Brand style={{ color: "rgb(41, 121, 41)" }}>
+                        <Navbar.Brand style={{ color: "rgb(255,255,255)" }}>
                            NAGINA'S PORTFOLIO
                         </Navbar.Brand>
-                        <Nav className="me-auto">
-                           <Link
-                              activeClass="active"
-                              className="links"
-                              to="home"
-                              spy={true}
-                              smooth={true}
-                              duration={-500}
-                              delay={0}
-                              spyThrottle={0}
-                           >
-                              HOME
-                           </Link>
-                           <Link
-                              duration={-500}
-                              delay={0}
-                              className="links"
-                              to="about"
-                              spy={true}
-                              smooth={true}
-                           >
-                              ABOUT{" "}
-                           </Link>
-                           <Link
-                              className="links"
-                              to="resume"
-                              spy={true}
-                              smooth={true}
-                              duration={-500}
-                              delay={0}
-                           >
-                              RESUME
-                           </Link>
-                           <Link
-                              className="links"
-                              to="projects"
-                              spy={true}
-                              smooth={true}
-                              duration={-500}
-                              delay={0}
-                           >
-                              PROJECTS
-                           </Link>
-                           <Link
-                              className="links"
-                              to="contact"
-                              spy={true}
-                              smooth={true}
-                              duration={-500}
-                              delay={0}
-                           >
-                              CONTACT
-                           </Link>
-                        </Nav>
+                        <Navbar.Toggle aria-controls="navbarScroll" />
+                        <Navbar.Collapse id="navbarScroll">
+                           <Nav className="me-auto">
+                              <Link
+                                 activeClass="active"
+                                 className="links"
+                                 to="home"
+                                 spy={true}
+                                 smooth={true}
+                                 duration={-500}
+                                 delay={0}
+                                 spyThrottle={0}
+                              >
+                                 HOME
+                              </Link>
+                              <Link
+                                 duration={-500}
+                                 delay={0}
+                                 className="links"
+                                 to="about"
+                                 spy={true}
+                                 smooth={true}
+                              >
+                                 ABOUT{" "}
+                              </Link>
+                              <Link
+                                 className="links"
+                                 to="resume"
+                                 spy={true}
+                                 smooth={true}
+                                 duration={-500}
+                                 delay={0}
+                              >
+                                 RESUME
+                              </Link>
+                              <Link
+                                 className="links"
+                                 to="projects"
+                                 spy={true}
+                                 smooth={true}
+                                 duration={-500}
+                                 delay={0}
+                              >
+                                 PROJECTS
+                              </Link>
+                              <Link
+                                 className="links"
+                                 to="contact"
+                                 spy={true}
+                                 smooth={true}
+                                 duration={-500}
+                                 delay={0}
+                              >
+                                 CONTACT
+                              </Link>
+                           </Nav>
+                        </Navbar.Collapse>
                      </Container>
                   </Navbar>
                </div>
-               <div className="p2">
-                  <span className="imgSpan1">
-                     {" "}
-                     <Image
-                        src={img14}
-                        style={{
-                           width: 210,
-                           height: 210,
-                           borderRadius: 300 / 2,
-                        }}
-                     ></Image>
-                  </span>
-                  <div className="console-container">
-                     <span id="text">Hi, I am Nagina </span>
-                     <div className="console-underscore" id="console">
-                        &#95;
+               <div className="box">
+                  <>
+                     <div className="p2">
+                        <span className="imgSpan1">
+                           {" "}
+                           <Image
+                              src={img14}
+                              style={{
+                                 width: 210,
+                                 height: 210,
+                                 borderRadius: 300 / 2,
+                              }}
+                           ></Image>
+                        </span>
+                        <div className="console-container">
+                           <span id="text">Hi, I am Nagina </span>
+                           <div className="console-underscore" id="console">
+                              &#95;
+                           </div>
+                        </div>
+                        <div id="dev-content">
+                           I'm a Full Stack Developer with a passion for solving
+                           real world problems with Programming.
+                           <br /> And I believe i'm a developer who always wants
+                           create something new
+                           <br /> Let's start scrolling and learn more about me
+                        </div>
+                        {/* <Image className="img1" src={img11}></Image> */}
+                        {/* <Image src={img12}></Image> */}
                      </div>
-                  </div>
-                  <div id="dev-content">
-                     I'm a Full Stack Developer with a passion for solving real
-                     world problems with mathematics.
-                     <br /> And I believe I can solve some if not all of your
-                     problems.
-                     <br /> Let's start scrolling and learn more about me
-                  </div>
-                  {/* <Image className="img1" src={img11}></Image> */}
-                  {/* <Image src={img12}></Image> */}
+                  </>
+                  {/* <Image src={img13}></Image> */}
+                  {/* <Image src={img14}></Image> */}
                </div>
-               {/* <Image src={img13}></Image> */}
-               {/* <Image src={img14}></Image> */}
-               {/* </div> */}
             </div>
             <div className="imgAbout">
                <span className="imgSpan">
@@ -215,14 +170,15 @@ class Portfolio extends React.Component {
                      smooth={true}
                      duration={-500}
                      delay={0}
-                     style={{ color: "white" }}
+                     id="here"
+                     onMouseOver="arrow"
                   >
                      here
                   </Link>
                   .<h2>Contact Details</h2>
                   Nagina Sonti <br />
                   B-109/51 Mira Nagar
-                  <br /> robot square, A-11/02,Dewas M.P.
+                  <br /> robot city, A-11/02,Dewas M.P.
                   <br />
                   <p id="mobileNo">
                      <BsFillTelephoneFill />
@@ -260,19 +216,20 @@ class Portfolio extends React.Component {
                   <h2 className="e1">INTERNSHIP</h2>
                </div>
                <div id="work1">
-                  <h2 className="blackColor">Data Engineering Intern</h2>
+                  {/* <h2 className="blackColor">Projects </h2>
                   Design and implementation of data processing elements in a
                   data pipeline, Optimising algorithms for removing road blocks
                   in a data pipeline, Implementing a software/engine as a
-                  Service, Automating testing for increasing efficiency of work
+                  Service, Automating testing for increasing efficiency of work */}
                   <h2 className="blackColor">Full Stack Developer Intern</h2>
-                  Design, implementation and testing of RESTful APIs in ReactJS.{" "}
-                  Design and implementation of responsive pages using
-                  JavaScript, bootstrap and ReactJS Templates. Design and
-                  implementation of a TCP/IP network architecture between
-                  systems. Research and integration with third-party APIs.{" "}
-                  Database design for storing data accumulated from different
-                  APIs.
+                  Full Stack Web Development Bootcamp Newton School:- Full Stack
+                  Web Development along with Problem Solving. Technical Stack
+                  learned: Node JS, React JS, Express JS, Mongo DB, HTML, CSS,
+                  JavaScript, and Bootstrap. Participated in various Coding
+                  contests organized by the platform. Worked on various projects
+                  like To-do-list, Pro-Mentor-Techs, Calculator,URLs
+                  Shortener,Songs Lyrics App. Created various games like
+                  Tic-Tac-Toe, Kill-Monster.
                </div>
             </div>{" "}
             <div className="Skills">
@@ -282,11 +239,11 @@ class Portfolio extends React.Component {
                <span className="skillchild">
                   <span className="skillsDiv">
                      <div id="allB">
-                        While learning, breadth-first search might do the
-                        trick...But
-                        <br />I believe the core algorithm that we must apply
-                        while grasping <br />
-                        an important skill is depth first search(weighted).
+                        “Perfection is achieved not when there is nothing more
+                        to add,
+                        <br />
+                        but rather when there is nothing more to take away.” – I
+                        believe “Simplicity is the soul of efficiency.” –<br />
                      </div>
                      <div>
                         <>
@@ -356,28 +313,28 @@ class Portfolio extends React.Component {
                                  striped={true}
                                  id="p1"
                                  variant="black"
-                                 now={50}
-                              />
-                              <h4>C</h4>
-                              <ProgressBar
-                                 striped={true}
-                                 id="p1"
-                                 variant="black"
-                                 now={50}
+                                 now={90}
                               />
                               <h4>JavaScript</h4>
                               <ProgressBar
                                  striped={true}
                                  id="p1"
                                  variant="black"
-                                 now={50}
+                                 now={90}
+                              />
+                              <h4>C</h4>
+                              <ProgressBar
+                                 striped={true}
+                                 id="p1"
+                                 variant="black"
+                                 now={80}
                               />
                               <h4>C++</h4>
                               <ProgressBar
                                  striped={true}
                                  id="p1"
                                  variant="black"
-                                 now={50}
+                                 now={75}
                               />
                               <h4>SQL</h4>
                               <ProgressBar
@@ -396,14 +353,14 @@ class Portfolio extends React.Component {
                                  striped={true}
                                  id="p1"
                                  variant="black"
-                                 now={50}
+                                 now={70}
                               />
                               <h4>MYSQL</h4>
                               <ProgressBar
                                  striped={true}
                                  id="p1"
                                  variant="black"
-                                 now={50}
+                                 now={60}
                               />
                            </div>
                         ) : null}
@@ -415,14 +372,14 @@ class Portfolio extends React.Component {
                                  striped={true}
                                  id="p1"
                                  variant="black"
-                                 now={50}
+                                 now={80}
                               />
                               <h4>ExpressJS</h4>
                               <ProgressBar
                                  striped={true}
                                  id="p1"
                                  variant="black"
-                                 now={50}
+                                 now={60}
                               />
                            </div>
                         ) : null}
@@ -434,47 +391,47 @@ class Portfolio extends React.Component {
                                  striped={true}
                                  id="p1"
                                  variant="black"
-                                 now={50}
+                                 now={80}
                               />
                               <h4>Full Stack Development</h4>
                               <ProgressBar
                                  striped={true}
                                  id="p1"
                                  variant="black"
-                                 now={50}
+                                 now={80}
                               />
                               <h4>Problem Solving</h4>
                               <ProgressBar
                                  striped={true}
                                  id="p1"
                                  variant="black"
-                                 now={50}
+                                 now={65}
                               />
                            </div>
                         ) : null}
                         {/**other tools */}
                         {this.state.skills === "other-tools" ? (
                            <div>
-                              <h4>NodeJS</h4>
-                              <ProgressBar
-                                 striped={true}
-                                 id="p1"
-                                 variant="black"
-                                 now={50}
-                              />
                               <h4>Html</h4>
                               <ProgressBar
                                  striped={true}
                                  id="p1"
                                  variant="black"
-                                 now={50}
+                                 now={90}
                               />
-                              <h4>CSS</h4>
+                              <h4>CSS </h4>
                               <ProgressBar
                                  striped={true}
                                  id="p1"
                                  variant="black"
-                                 now={50}
+                                 now={90}
+                              />
+                              <h4>NodeJS</h4>
+                              <ProgressBar
+                                 striped={true}
+                                 id="p1"
+                                 variant="black"
+                                 now={80}
                               />
                            </div>
                         ) : null}
@@ -490,17 +447,106 @@ class Portfolio extends React.Component {
                   </Button>
                </div>
                <div className="projectsDiv">
-                  <div className="project1">
-                     {" "}
-                     <Image src={proimg1}></Image>{" "}
+                  <div className="one-project">
+                     <div className="project1">
+                        {" "}
+                        <Image className="project-img" src={img15}></Image>{" "}
+                     </div>
+                     <div className="project2">
+                        <h3>Pro-Mentor-Techs</h3>
+                        <p>
+                           <ul>
+                              <li>
+                                 Pro-Mentor-Techs is a web application that is
+                                 used for becoming a mentor and finding a
+                                 mentor.
+                              </li>
+                              <li>
+                                 {" "}
+                                 Features: Registration Form, Progress Tracking,
+                                 Find A Mentor, Become A Mentor. Quick Updates
+                                 and better Reliability were provided.
+                              </li>
+                              <li>
+                                 {" "}
+                                 Role: Full Stack | Tech Stack: Node JS, React
+                                 JS Express JS, MongoDB, Mongoose,
+                                 React-Bootstrap.
+                              </li>
+                              <li>
+                                 {" "}
+                                 This is an online plateform for Mentors and
+                                 Students where user can register as a
+                                 Mentee/Mentor for multiple courses ,can | join
+                                 1-1 sessions and | also Mentor can create
+                                 multiple courses .
+                              </li>
+                           </ul>
+                        </p>
+                     </div>
                   </div>
-                  <div className="project2">
-                     <h3>Personal-Portfolio</h3>
-                     <p>
-                        This is simple reactjs project which is described
-                        personal skills and achivements.I have used React-Js and
-                        React-bootstrap to develope this website.
-                     </p>
+                  <div className="one-project">
+                     <div className="project1">
+                        {" "}
+                        <Image className="project-img" src={img16}></Image>{" "}
+                     </div>
+                     <div className="project2">
+                        <h3>Tiny URLs</h3>
+                        <p>
+                           <ul>
+                              <li>
+                                 Tiny URLs is a website used for generating tiny
+                                 URLs from long URLs.
+                              </li>
+                              <li>
+                                 Features: generate small URL, click count,
+                                 custom URL.
+                              </li>
+                              <li>
+                                 Role: Developer | Tech Stack: Node JS, React JS
+                                 Express JS, MongoDB, Mongoose, React-Bootstrap.
+                              </li>
+                              <li>
+                                 This is a web application which is create short
+                                 URLs . Here User give long URLs of any website
+                                 and It creates Tiny URLs and then User can copy
+                                 that Tiny URLs and also directly can go on
+                                 onClick of URLs button.
+                              </li>
+                           </ul>{" "}
+                        </p>
+                     </div>
+                  </div>
+                  <div className="one-project">
+                     <div className="project1">
+                        {" "}
+                        <Image className="project-img" src={img17}></Image>{" "}
+                     </div>
+                     <div className="project2">
+                        <h3>Songs Lyrics App</h3>
+                        <p>
+                           <ul>
+                              <li>
+                                 Songs Lyrics App is a website used for
+                                 searching lyrics of songs.
+                              </li>
+                              <li>
+                                 Features: Searching lyrics By song Name,Singer
+                                 name, Song Artist name.
+                              </li>
+                              <li>
+                                 Role: Developer | Tech Stack: Node JS, React JS
+                                 Express JS, React-Bootstrap.
+                              </li>
+                              <li>
+                                 This is a web Application Where user can search
+                                 lyrics for any type of songs and | When click
+                                 on the song name it opens a lyrics page of that
+                                 song.
+                              </li>
+                           </ul>{" "}
+                        </p>
+                     </div>
                   </div>
                </div>
             </div>
@@ -521,8 +567,9 @@ class Portfolio extends React.Component {
                            <Form.Control
                               id="input-bars"
                               size="lg"
-                              type="text"
+                              // type="text"
                               placeholder="name"
+                              type="reset"
                            />
                         </Form.Group>
                         <Form.Group
@@ -567,7 +614,11 @@ class Portfolio extends React.Component {
                               rows={3}
                            />
                         </Form.Group>{" "}
-                        <Button variant="success" size="lg">
+                        <Button
+                           variant="success"
+                           size="lg"
+                           onClick={this.sendthru}
+                        >
                            Submit Message
                         </Button>
                      </Form>
